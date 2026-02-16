@@ -41,6 +41,8 @@ Interview the human to surface their principles on the target domain. Ask probin
 
 Get 5-10 strong positions. Push past surface answers — ask "why?" and "what convinced you?" Don't accept platitudes.
 
+> **Bitcoin domain:** Load `references/bitcoin-quiz.md` for a comprehensive set of maximalism-probing questions. Use these as your interview guide — adapt based on the human's responses.
+
 Save their responses to a working file: `docs/research/<domain>/quiz-responses.md`
 
 **Why quiz first:** If you analyze source material before interviewing the human, their answers get anchored to what they just read. You want their genuine convictions, not recency-biased parroting.
@@ -67,6 +69,8 @@ If the human has a dataset, book, podcast transcript, reading list, or other sou
 Present the comparison: "Here's where the source material aligns with what you told me, and here's where it diverges." Let the human reconcile.
 
 If no source material exists, skip to Phase 3. The human's quiz answers are sufficient raw material.
+
+> **Bitcoin domain:** Load `references/bitcoin-dataset.md` for instructions on pulling and filtering the Spirit of Satoshi Bitcoin Maximalism dataset from Hugging Face. This is the default source material for Bitcoin worldview runs.
 
 **Output:** Filtered source material saved. Alignment/conflict summary presented and discussed.
 
