@@ -141,7 +141,15 @@ The surviving axioms are the worldview. Commit them.
    - Set up review cadence (biweekly or monthly, human's preference)
    - Explain the HELD/BENT/BROKEN scoring system
 
-**Output:** Axioms committed, meta-principle written, evolution mode chosen and documented.
+5. **Identity Stack (if multiple domains exist).** If the human already has committed worldviews in other domains, present the identity stack:
+
+> "You now have worldviews in [domains]. When principles from different domains conflict, which wins? Rank them by priority — the top domain's principles override lower ones."
+
+   - Write the ranked stack to the top of PRINCIPLES.md
+   - The human can reorder anytime — this isn't permanent, just current priority
+   - First-time runs: skip this step (nothing to rank yet). Mention it'll come up when they add a second domain.
+
+**Output:** Axioms committed, meta-principle written, evolution mode chosen, identity stack ranked (if applicable).
 
 ---
 
