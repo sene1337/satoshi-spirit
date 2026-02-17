@@ -1,33 +1,24 @@
 # Bitcoin Maximalism Dataset — Phase 2 Instructions
 
-Source: [Spirit of Satoshi Bitcoin Maximalism Dataset](https://huggingface.co/datasets/AskSatoshi/bitcoin-maximalism)
+Source: [Bitcoin Maximalism Benchmark](https://github.com/sene1337/bitcoin-maximalism-benchmark) (maintained by Sene)
+
+Originally derived from the Spirit of Satoshi dataset (`AskSatoshi/bitcoin-maximalism` on HuggingFace, ~265 entries). Expanded Feb 2026 with 56 new entries covering post-2023 events (ETFs, 2024 halving, ordinals, Samourai arrests, nation-state adoption, AI+Bitcoin, etc.) and 10 stale entries updated for accuracy.
 
 ## Pulling the Dataset
 
-### Option 1: Direct download (recommended)
+### Option 1: Clone the repo (recommended)
 ```bash
-# The dataset is a single parquet file
-pip install pandas pyarrow
-python3 -c "
-import pandas as pd
-df = pd.read_parquet('hf://datasets/AskSatoshi/bitcoin-maximalism/data/train-00000-of-00001.parquet')
-df.to_json('bitcoin-maximalism-raw.json', orient='records', indent=2)
-print(f'Downloaded {len(df)} entries')
-"
+git clone https://github.com/sene1337/bitcoin-maximalism-benchmark.git
+# Dataset is at data/benchmark.json
 ```
 
-### Option 2: Hugging Face datasets library
+### Option 2: Direct download
 ```bash
-pip install datasets
-python3 -c "
-from datasets import load_dataset
-ds = load_dataset('AskSatoshi/bitcoin-maximalism', split='train')
-ds.to_json('bitcoin-maximalism-raw.json')
-"
+curl -sL https://raw.githubusercontent.com/sene1337/bitcoin-maximalism-benchmark/main/data/benchmark.json -o bitcoin-maximalism.json
 ```
 
-### Option 3: Use the pre-filtered version
-If the workspace already has a filtered copy at `docs/research/bitcoin-maximalism/dataset-filtered.json`, use that directly.
+### Option 3: Use the workspace copy
+If the workspace already has a copy at `data/bitcoin-maximalism/combined-dataset.json`, use that directly.
 
 ## Dataset Structure
 
@@ -36,7 +27,7 @@ Each entry has three fields:
 - **Question** — the prompt
 - **Expected Answer** — the maximalist/Satoshi-aligned response
 
-## Category Breakdown (raw dataset: ~265 entries)
+## Category Breakdown (~321 entries, post-expansion)
 
 | Category | Count | Action |
 |----------|-------|--------|
@@ -67,7 +58,7 @@ The "Basedness" category mixes libertarian principles with culture war topics. R
 - Climate change denial
 - Hate speech definitions
 
-This filtering typically reduces ~28 Basedness entries to ~5, bringing the total from ~265 to ~242.
+This filtering typically reduces ~28 Basedness entries to ~5.
 
 **The human makes the final call.** Present the Basedness entries individually and let them decide what stays.
 
@@ -84,6 +75,6 @@ Present the comparison as a structured summary before moving to Phase 3 (axiom d
 
 ## Expected Output
 
-- Filtered dataset saved to `docs/research/bitcoin-maximalism/dataset-filtered.json`
+- Filtered dataset saved to `docs/research/bitcoin-maximalism/dataset-filtered.json` (or sourced from GitHub repo)
 - Category summary with counts
 - Alignment/conflict/gap analysis relative to Phase 1 responses
