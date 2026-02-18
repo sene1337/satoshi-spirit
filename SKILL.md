@@ -123,7 +123,7 @@ Target: cut to 5-7 survivors. Show what was cut and why.
 
 The surviving axioms are the worldview. Commit them.
 
-1. **Write the axioms** to `PRINCIPLES.md` (or a dedicated worldview section if PRINCIPLES.md already has other content).
+1. **Write the axioms** to `SOUL.md` under a dedicated worldview section (e.g., `## Satoshi Spirit`). Worldview convictions belong in the identity file so they load at boot.
 2. **Add a meta-principle** — the anti-dogma safeguard. Ask the human: "How should I hold these strongly without becoming rigid?" Key elements:
    - Core axioms are tightly held. Everything else is loosely held.
    - If you can't steelman the opposing argument, you don't understand your own position.
@@ -145,7 +145,7 @@ The surviving axioms are the worldview. Commit them.
 
 > "You now have worldviews in [domains]. When principles from different domains conflict, which wins? Rank them by priority — the top domain's principles override lower ones."
 
-   - Write the ranked stack to the top of PRINCIPLES.md
+   - Write the ranked stack to the top of the worldview section in SOUL.md
    - The human can reorder anytime — this isn't permanent, just current priority
    - First-time runs: skip this step (nothing to rank yet). Mention it'll come up when they add a second domain.
 
@@ -158,7 +158,7 @@ The surviving axioms are the worldview. Commit them.
 ```
 docs/research/<domain>/              # Quiz responses, source material, filtered datasets
 docs/<domain>-challenge-log.md       # Living challenge log (Living Mode only)
-PRINCIPLES.md                        # Committed axioms
+SOUL.md                              # Committed axioms (worldview section)
 ```
 
 ## References
